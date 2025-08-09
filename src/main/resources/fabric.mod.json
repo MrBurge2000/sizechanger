@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "sizechanger",
+  "version": "1.0.0",
+  "name": "Sizechanger",
+  "description": "A mod that allows players to change size.",
+  "authors": ["YourName"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.example.sizechanger.SizechangerMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.6",
+    "fabric": "*",
+    "minecraft": "1.21.8"
+  }
+}
