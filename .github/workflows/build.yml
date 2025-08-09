@@ -1,6 +1,8 @@
 name: Build mod
-on: [push]
-
+on:
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,10 +13,12 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
-      - name: Install Gradle and Generate Wrapper
-        run: sudo apt-get update && sudo apt-get install -y gradle && gradle wrapper --gradle-version 8.10.2 --distribution-type bin
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 8.10.2
       - name: Build
-        run: chmod +x ./gradlew && ./gradlew --no-daemon clean build
+        run: gradle build
       - name: Upload Jar
         uses: actions/upload-artifact@v4
         with:
