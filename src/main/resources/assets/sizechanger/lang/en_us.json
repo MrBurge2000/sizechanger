@@ -1,0 +1,8 @@
+{
+  "item.sizechanger.size_tuner": "Size Tuner",
+  "itemGroup.sizechanger": "Size Changer",
+  "screen.sizechanger.title": "Size Tuner",
+  "screen.sizechanger.subtitle": "Choose a preset (cost in slime)",
+  "msg.sizechanger.need_slime": "Not enough Slimeballs! Need %s.",
+  "msg.sizechanger.set": "Scale set to %s×"
+}
